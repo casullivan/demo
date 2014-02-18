@@ -25,6 +25,8 @@ body{
 #demo2{
 	position:relative;
 	left:235px;
+	top:-31px;
+
 	-webkit-transform: rotate(-90deg) translateX(-90px);
 	-moz-transform: rotate(-90deg) translateX(-90deg);
 	-ms-transform: rotate(-90deg) translateX(-90deg);

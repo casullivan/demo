@@ -2,16 +2,20 @@ $(function() {
   $('#demo1').slidesjs({
     width: 235,
     height: 88,
-    auto: false,
-    restartDelay: 2500,
+    play:{
+	    restartDelay: 500,
+	    auto: true
+	},
     navigation: false
   });
 
   $('#demo2').slidesjs({
     width: 235,
     height: 88,
-    auto: false,
-    restartDelay: 2500,
+    play:{
+	    restartDelay: 500,
+	    auto: true
+	},
     navigation: false,
     callback:{
     	loaded: function(n){
