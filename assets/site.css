@@ -15,12 +15,7 @@ body{
 	height:900px; 
 }
 
-.text{
-   	font-size: 200%;
-   	-webkit-transform: scale(0.2);
-	-moz-transform: scale(0.2);
-	-o-transform: scale(0.2);
-}
+.text{}
 
 #demo1, #demo2{
 	position:relative;
@@ -46,6 +41,7 @@ body{
 	width: 235px;
 	height: 88px;
 }
+
 
 /* Demo Syles */
 
