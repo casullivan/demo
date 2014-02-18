@@ -12,5 +12,5 @@ $(function() {
   });
 
   $(document).bind('touchmove', false);
-  
+  document.ontouchmove = function(e){ e.preventDefault(); }
 });
