@@ -18,6 +18,15 @@ body{
 	height: 88px;
 }
 
+#demo2{
+	position:relative;
+	left:235px;
+	-webkit-transform: rotate(-90deg) translateX(-90px);
+-moz-transform: rotate(-50deg) translateX(-60px);
+-ms-transform: rotate(-50deg) translateX(-60px);
+-o-transform: rotate(-50deg) translateX(-60px);
+}
+
 .nineforty{
 	width: 235px;
 	height: 88px;
