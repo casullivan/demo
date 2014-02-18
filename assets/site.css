@@ -1,7 +1,10 @@
 body{ 
 	width:100%;
 	height:100%;
-   background: url(../images/retina_wood.png);
+   	background: url(../images/retina_wood.png);
+   	position:absolute;
+   	font-size: 200%;
+
 }
 
 #container{
@@ -10,10 +13,12 @@ body{
 	margin-top:100px;
 	width:235px;
 	height:900px; 
-
 }
 
+.text{}
+
 #demo1, #demo2{
+	position:relative;
 	width: 235px;
 	height: 88px;
 }
@@ -36,6 +41,17 @@ body{
 	width: 235px;
 	height: 88px;
 }
+
+/*extra */
+#demo1 .nineforty{
+	border:0px solid transparent;
+	-webkit-border-radius:100%;
+}
+#demo1{
+	margin-left:135px;
+	width: 100px;
+}
+/*extra */
 
 /* Demo Syles */
 
