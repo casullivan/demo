@@ -10,4 +10,7 @@ $(function() {
     height: 88,
     navigation: false
   });
+
+  $(document).bind('touchmove', false);
+  
 });
