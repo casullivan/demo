@@ -1,1 +1,1 @@
-<div id = "header"></div>
+<div id = "header"><p class="text">BRAVE CONTROLS SOLUTIONS</p></div>
