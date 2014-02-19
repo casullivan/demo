@@ -1,41 +1,27 @@
 body{ 
-	width:100%;
-	height:100%;
    	background: url(/images/retina_wood.png);
-   	position:absolute;
-
 }
 
 body, html{
-	overflow:hidden;
 }
 
 #container{
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:100px;
-	width:1920px;
-	height:2160px; 
 }
 
 #demo1, #demo2, #demo3{
-	position:relative;
 	width:1920px;
 	height:1080px; 
 }
 
-.slide{
-    display:none;
-}
-
 .m1080{
 	width:1920px;
-	height:1240px; 
+	height:1080px; 
 }
 
+#main{
 
+}
 /* Demo Syles */
-
 .swiper-container {
 	width:1920px;
 	height:1080px; 
@@ -55,5 +41,4 @@ body, html{
 .swiper-active-switch {
   background: #fff;
 }
-
 /* \ Demo Syles */
