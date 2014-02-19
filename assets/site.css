@@ -3,51 +3,42 @@ body{
 	height:100%;
    	background: url(/images/retina_wood.png);
    	position:absolute;
-   	font-size: 200%;
 
+}
+
+body, html{
+	overflow:hidden;
 }
 
 #container{
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:100px;
-	width:235px;
-	height:900px; 
+	width:1920px;
+	height:2160px; 
 }
 
-.text{}
-
-#demo1, #demo2{
+#demo1, #demo2, #demo3{
 	position:relative;
-	width: 235px;
-	height: 88px;
+	width:1920px;
+	height:1080px; 
 }
 
 .slide{
     display:none;
 }
 
-#demo2{
-	position:relative;
-	left:235px;
-	top:-31px;
-	-webkit-transform: rotate(-90deg) translateX(-90px);
-	-moz-transform: rotate(-90deg) translateX(-90deg);
-	-ms-transform: rotate(-90deg) translateX(-90deg);
-	-o-transform: rotate(-90deg) translateX(-90deg);
-}
-
-.nineforty{
-	width: 235px;
-	height: 88px;
+.m1080{
+	width:1920px;
+	height:1240px; 
 }
 
 
 /* Demo Syles */
 
 .swiper-container {
-	width: 235px;
-	height: 88px;
+	width:1920px;
+	height:1080px; 
 }
 
 .swiper-pagination-switch {
