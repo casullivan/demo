@@ -1,25 +1,19 @@
-$(function() {
+$( document ).ready(function() {
 	//$('body').html(window.screen.availHeight+'x'+window.screen.availWidth);
-var mySwiper = new Swiper('#main',{
-    loop:true,
-    grabCursor: true,
-    paginationClickable: true,
-    mode: 'vertical'
-  });
- var mySwiper1 = new Swiper('#demo1',{
-    loop:true,
-    grabCursor: true,
-    paginationClickable: true
-  });
- var mySwiper2 = new Swiper('#demo2',{
-    loop:true,
-    grabCursor: true,
-    paginationClickable: true
-  });
- var mySwiper3 = new Swiper('#demo3',{
-    loop:true,
-    grabCursor: true,
-    paginationClickable: true
-  });
+	var parentSwiper = new Swiper('#main',{
+		mode: 'vertical',
+		onResistanceAfter: function(s,p){
+			console.log("resist after main "+p);
+				parentSwiper.swipeNext();
+		},
+		onResistanceBefore: function(s,p){
+			console.log("resist before main "+p);
+				parentSwiper.swipePrev();
+		}
+	});
+	var swiper1 = new Swiper('.swiper-nested-1');
+	var swiper2 = new Swiper('.swiper-nested-2');
+	var swiper3 = new Swiper('.swiper-nested-3');
+
   document.ontouchmove = function(e){ e.preventDefault(); }
 });
