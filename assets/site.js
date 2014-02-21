@@ -1,30 +1,44 @@
-$(function() {
-	//$('body').html(window.screen.availHeight+'x'+window.screen.availWidth);
-	var mySwiper = new Swiper('#main',{
-		loop:true,
-		grabCursor: true,
-		paginationClickable: true,
-		mode: 'vertical',
-		onSlideChangeEnd: function(swiper){
-		  mySwiper1.swipeTo(0, 0, false);
-		  mySwiper2.swipeTo(0, 0, false);
-		  mySwiper3.swipeTo(0, 0, false);
+$( document ).ready(function() {
+
+	var parentSwiperCount = parseInt($('.parent-swiper').data('count'));
+
+	var swiper1 = new Swiper('.swiper-nested-1',{
+		onResistanceAfter: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeNext(); },
+		onResistanceBefore: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(parentSwiperCount, 150, false); }
+	});
+	var swiper2 = new Swiper('.swiper-nested-2',{
+		onResistanceAfter: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeNext(); },
+		onResistanceBefore: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipePrev(); }
+	});
+	var swiper3 = new Swiper('.swiper-nested-3',{
+		onResistanceAfter: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(0, 150, false); },
+		onResistanceBefore: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipePrev(); }
+	});
+	var parentSwiper = new Swiper('.parent-swiper',{
+		noSwiping: true,
+		resistance: '50%',
+		onResistanceBefore: function(swiper, pixels){ 
+			 if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(parentSwiperCount, 150, false); 
+		},
+		onResistanceAfter: function(swiper, pixels){ 
+			 if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(0, 150, false); 
+		},
+		onSlideChangeStart: function(swiper, direction){
+			swiper1.swipeTo(0);
+			swiper2.swipeTo(0);
+			swiper3.swipeTo(0);
 		}
 	});
-	var mySwiper1 = new Swiper('#demo1',{
-		loop:true,
-		grabCursor: true,
-		paginationClickable: true
-	});
-	var mySwiper2 = new Swiper('#demo2',{
-		loop:true,
-		grabCursor: true,
-		paginationClickable: true
-	});
-	var mySwiper3 = new Swiper('#demo3',{
-		loop:true,
-		grabCursor: true,
-		paginationClickable: true
-	});
+
+	$(document.body).swipe({
+		swipeUp:function(event, direction, distance, duration) {
+	    	parentSwiper.swipePrev();
+	  	},
+	
+	  	swipeDown:function(event, direction, distance, duration) {
+			parentSwiper.swipeNext();
+	    },
+	});	
+
   document.ontouchmove = function(e){ e.preventDefault(); }
 });
