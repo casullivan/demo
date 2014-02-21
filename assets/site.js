@@ -1,7 +1,6 @@
 $( document ).ready(function() {
-	//$('body').html(window.screen.availHeight+'x'+window.screen.availWidth);
+	
 	var parentSwiperCount = parseInt($('.parent-swiper').data('count'));
-	console.log(parentSwiperCount);
 	var swiper1 = new Swiper('.swiper-nested-1',{
 		onResistanceAfter: function(swiper, pixels){ if(pixels >= 100 || pixels <= -100 ) parentSwiper.swipeNext(); },
 		onResistanceBefore: function(swiper, pixels){ if(pixels >= 100 || pixels <= -100 ) parentSwiper.swipeTo(parentSwiperCount, 100, false); }
@@ -29,6 +28,7 @@ $( document ).ready(function() {
 			swiper3.swipeTo(0);
 		}
 	});
+
 	$(document.body).swipe({
 		swipeUp:function(event, direction, distance, duration) {
 	    	parentSwiper.swipePrev();
@@ -37,10 +37,7 @@ $( document ).ready(function() {
 	  	swipeDown:function(event, direction, distance, duration) {
 			parentSwiper.swipeNext();
 	    },
-	});
-		
+	});	
 
   document.ontouchmove = function(e){ e.preventDefault(); }
 });
-
-//mySwiper.wrapperTransitionEnd(callback,permanent) 
