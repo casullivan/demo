@@ -11,6 +11,6 @@
 	<link rel="stylesheet" href="/assets/html5reset.css" media="all">
 	<link rel="stylesheet" href="/assets/site.css" media="all">
  </head>
- <body class="zoomViewport">
- <div id = "container" class="zoomContainer">
+ <body>
+ <div id = "container">
 	<?php include("hero.php"); ?>

@@ -1,9 +1,8 @@
 $( document ).ready(function() {
-	var bookmarks = [0, 3, 7];
-	var parentSwiperCount = parseInt($('.parent-swiper').data('count'));
+	//var count = parseInt($('.parent-swiper').data('count'));
 	var parentSwiper = new Swiper('.parent-swiper',{
 		loop: true,
-		autoplay:3000,
+		autoplay:10000,
 		resistance: '50%',
 		onResistanceAfter: function(swiper, pixels){ 
 			 if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(0, 150, false); 
