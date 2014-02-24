@@ -7,7 +7,7 @@ demo | demo
 <h4>Client</h4>
 <ul><li>iOS 7.0</li>
 	<li>1024x768px</li>
-	<li>Murcury Browser 8.2 https://itunes.apple.com/ca/app/mercury-web-browser/id331012646</li></ul>
+	<li>Mercury Browser 8.2 https://itunes.apple.com/ca/app/mercury-web-browser/id331012646</li></ul>
 <br/>
 <h3>Enviroment</h3> 
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install apache2 php5 avahi-daemon -y
