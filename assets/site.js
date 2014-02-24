@@ -1,44 +1,34 @@
 $( document ).ready(function() {
-
-	var parentSwiperCount = parseInt($('.parent-swiper').data('count'));
-
-	var swiper1 = new Swiper('.swiper-nested-1',{
-		onResistanceAfter: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeNext(); },
-		onResistanceBefore: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(parentSwiperCount, 150, false); }
-	});
-	var swiper2 = new Swiper('.swiper-nested-2',{
-		onResistanceAfter: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeNext(); },
-		onResistanceBefore: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipePrev(); }
-	});
-	var swiper3 = new Swiper('.swiper-nested-3',{
-		onResistanceAfter: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(0, 150, false); },
-		onResistanceBefore: function(swiper, pixels){ if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipePrev(); }
-	});
+	//var count = parseInt($('.parent-swiper').data('count'));
 	var parentSwiper = new Swiper('.parent-swiper',{
-		noSwiping: true,
+		loop: true,
+		autoplay:10000,
 		resistance: '50%',
-		onResistanceBefore: function(swiper, pixels){ 
-			 if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(parentSwiperCount, 150, false); 
-		},
 		onResistanceAfter: function(swiper, pixels){ 
 			 if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(0, 150, false); 
 		},
-		onSlideChangeStart: function(swiper, direction){
-			swiper1.swipeTo(0);
-			swiper2.swipeTo(0);
-			swiper3.swipeTo(0);
-		}
 	});
 
 	$(document.body).swipe({
-		swipeUp:function(event, direction, distance, duration) {
-	    	parentSwiper.swipePrev();
-	  	},
-	
 	  	swipeDown:function(event, direction, distance, duration) {
-			parentSwiper.swipeNext();
+			parentSwiper.swipeTo(nextBookmark(parentSwiper.activeIndex), 700);
 	    },
+		swipeUp:function(event, direction, distance, duration) {
+			parentSwiper.swipeTo(prevBookmark(parentSwiper.activeIndex), 700);
+	  	},
 	});	
 
-  document.ontouchmove = function(e){ e.preventDefault(); }
+	document.ontouchmove = function(e){ e.preventDefault(); }
+
+	function nextBookmark(index){
+		for(var i = 0; i<bookmarks.length; i++)
+			if(bookmarks[i]>index) return bookmarks[i];
+		return 0;
+	}
+
+	function prevBookmark(index){
+		if(index<=1) return bookmarks[bookmarks.length-1];
+		for(var i = bookmarks.length-1; i>=0; i--)
+			if(bookmarks[i]<index-1) return bookmarks[i];
+	}
 });
