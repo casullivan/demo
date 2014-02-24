@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-	//var count = parseInt($('.parent-swiper').data('count'));
 	var parentSwiper = new Swiper('.parent-swiper',{
 		loop: true,
 		autoplay:10000,
