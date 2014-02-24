@@ -3,10 +3,7 @@ $( document ).ready(function() {
 	var parentSwiper = new Swiper('.parent-swiper',{
 		loop: true,
 		autoplay:10000,
-		resistance: '50%',
-		onResistanceAfter: function(swiper, pixels){ 
-			 if(pixels >= 50 || pixels <= -50 ) parentSwiper.swipeTo(0, 150, false); 
-		},
+		resistance: '100%'
 	});
 
 	$(document.body).swipe({
