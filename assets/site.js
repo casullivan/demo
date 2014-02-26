@@ -1,9 +1,13 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 	var parentSwiper = new Swiper('.parent-swiper',{
 		loop: true,
-		autoplay:10000,
+		autoplay:4000,
 		resistance: '100%'
 	});
+
+	parentSwiper.wrapperTransitionEnd(function(e){
+		window.location.hash=e.activeSlide().id;
+	}, true);
 
 	$(document.body).swipe({
 	  	swipeDown:function(event, direction, distance, duration) {
@@ -13,8 +17,6 @@ $( document ).ready(function() {
 			parentSwiper.swipeTo(prevBookmark(parentSwiper.activeIndex), 700);
 	  	},
 	});	
-
-	document.ontouchmove = function(e){ e.preventDefault(); }
 
 	function nextBookmark(index){
 		for(var i = 0; i<bookmarks.length; i++)
@@ -28,3 +30,5 @@ $( document ).ready(function() {
 			if(bookmarks[i]<index-1) return bookmarks[i];
 	}
 });
+
+window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault(); } }
