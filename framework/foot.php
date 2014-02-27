@@ -1,7 +1,6 @@
 	<div id = "footer"></div>
 	</div>
 	<script src="/assets/jquery-1.11.0.js" type="text/javascript"></script>
-	
 	<script type="text/javascript">
 	var bookmarks = [];
 	$(document).ready(function(){

@@ -9,7 +9,36 @@ $(document).ready(function() {
 		window.location.hash=e.activeSlide().id;
 	}, true);
 
-	$(document.body).swipe({
+
+	var html5Video = function() {
+    return {
+        init: function() {
+            var video = document.getElementsByTagName('video')[0];
+            video.addEventListener('ended', endVideo, false);
+            video.addEventListener('pause', pauseVideo, false);
+            video.addEventListener('play', playVideo, false);
+        }
+    };
+	}();
+
+	function playVideo() { 
+		alert('play');
+		$('#video_cover').css('visibility','visible');
+	}
+
+	function endVideo() { 
+    	alert("video ended");
+	}
+
+	function pauseVideo() { 
+	    var video = document.getElementsByTagName('video')[0];
+	    if (!video.webkitDisplayingFullscreen)
+	        endVideo(); 
+	}
+
+	html5Video.init();
+
+	$(document).swipe({
 	  	swipeDown:function(event, direction, distance, duration) {
 			parentSwiper.swipeTo(nextBookmark(parentSwiper.activeIndex), 700);
 	    },
