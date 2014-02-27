@@ -46,10 +46,10 @@ $(document).ready(function() {
 
 	$(document).swipe({
 	  	swipeDown:function(event, direction, distance, duration) {
-			parentSwiper.swipeTo(nextBookmark(parentSwiper.activeIndex), 700);
+			parentSwiper.swipeTo(nextBookmark(parentSwiper.activeIndex), 100);
 	    },
 		swipeUp:function(event, direction, distance, duration) {
-			parentSwiper.swipeTo(prevBookmark(parentSwiper.activeIndex), 700);
+			parentSwiper.swipeTo(prevBookmark(parentSwiper.activeIndex), 100);
 	  	},
 	});	
 
