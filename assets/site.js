@@ -6,6 +6,8 @@ $(document).ready(function() {
 	});
 
 	parentSwiper.wrapperTransitionEnd(function(e){
+		if(e.activeSlide().id=='1')
+			$("#video").get(0).play();
 		window.location.hash=e.activeSlide().id;
 	}, true);
 
@@ -23,7 +25,7 @@ $(document).ready(function() {
 
 	function playVideo() { 
 		alert('play');
-		$('#video_cover').css('visibility','visible');
+		//$('#video_cover').css('visibility','visible');
 	}
 
 	function endVideo() { 
@@ -37,6 +39,10 @@ $(document).ready(function() {
 	}
 
 	html5Video.init();
+
+	$("#video").bind('scroll', function(){
+		$("html, body").animate({ scrollTop: 0 }, "fast");
+	});
 
 	$(document).swipe({
 	  	swipeDown:function(event, direction, distance, duration) {
