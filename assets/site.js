@@ -24,12 +24,12 @@ $(document).ready(function() {
 	}();
 
 	function playVideo() { 
-		alert('play');
+		parentSwiper.stopAutoplay();
 		//$('#video_cover').css('visibility','visible');
 	}
 
 	function endVideo() { 
-    	alert("video ended");
+		parentSwiper.startAutoplay();
 	}
 
 	function pauseVideo() { 
