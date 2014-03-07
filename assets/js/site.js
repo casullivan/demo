@@ -1,4 +1,4 @@
-var $;
+var S;
 $(document).ready(function() {
 	
 	S = new Swiper('.parent-swiper',{
@@ -11,7 +11,7 @@ $(document).ready(function() {
 		// if(e.activeSlide().id=='1')
 		// 	$("#video").get(0).play();
 		window.location.hash=e.activeSlide().id;
-	}, true);
+}, true);
 
 
 	// var html5Video = function() {
@@ -26,11 +26,17 @@ $(document).ready(function() {
 	// }();
 	// html5Video.init();
 
-	$('a').click(function(){
-		window.location.hash=e.activeSlide().id;
+	// tap local
+	$('t').on('tap', function(e){
+		S.swipeTo($(this).data('s'), 500);
 	});
 
-	function playVideo() { 
+	// tap href
+	$('th').on('tap', function(e){
+		window.location+=$(this).attr('href');
+	});
+
+	function playVideo() {
 		S.stopAutoplay();
 	}
 
@@ -64,4 +70,9 @@ window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault
 
 function addToNav(o){
 
+}
+
+function clickr(e){
+	e.preventDefault();
+	alert('z clicked');
 }

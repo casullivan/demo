@@ -1,6 +1,6 @@
 
 		<div id="link_to" style="background:url(/images/diagonal_striped_brick.png)" class="swiper-slide b" data-title="Demo2 - 1">
-			<div class="16x9"><a href="#1">link to video</a></div>
+			<div class="a16x9c"><a href="#1">link to video</a></div>
 		</div>
 		<div id='1' style="background:url(/images/pinstriped_suit.png);" class="swiper-slide">
 			<div class="video_cover" style="width:1024px; height:768px; background-color:rgba(255,0,0,.1); position:absolute; z-index:2;" >&nbsp;</div>
