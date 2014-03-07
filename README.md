@@ -3,11 +3,15 @@ demo | demo
 <h3>Recommends</h3> 
 <h4>Server</h4>
 <ul><li>PHP 5.3</li>
-	<li>Apache 2.2.22</li></ul>
+	<li>Apache 2.2.22</li>
+	<li>.htaccess</li>
+</ul>
 <h4>Client</h4>
-<ul><li>iOS 7.0</li>
+<ul><li>iOS 7.0 (HTML5, CSS3, H.264, appcache capable, mobileviewport)</li>
 	<li>1024x768px</li>
-	<li>Mercury Browser 8.2 https://itunes.apple.com/ca/app/mercury-web-browser/id331012646</li></ul>
+	<li>Safari webapp</li>
+	<li>Mercury Browser 8.2 https://itunes.apple.com/ca/app/mercury-web-browser/id331012646</li>
+</ul>
 <br/>
 <h3>Enviroment</h3> 
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install apache2 php5 avahi-daemon -y
@@ -21,3 +25,5 @@ https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
 <h3>TODO</h3>
 generate bookmarks array in PHP 
 https://github.com/JeffreyWay/Compress-and-Concatenate-Stylesheets-with-PHP
+cleanup bootstrap
+remove jquery

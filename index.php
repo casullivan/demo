@@ -3,8 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', True);
 
 include("framework/head.php"); ?>
-
-<div class="parent-swiper swiper-container" data-count="3">
+<div class="parent-swiper swiper-container">
 	<div class="swiper-wrapper">
 		<?php
 			$slidesDirectory = new RecursiveDirectoryIterator(realpath('slides'));
@@ -14,7 +13,5 @@ include("framework/head.php"); ?>
 		?>
 	</div>
 </div>
-<script type="text/javascript">
-	//var bookmarks = [0, 3, 7];
-</script>
+
 <?php include("framework/foot.php"); ?>

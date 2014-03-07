@@ -1,3 +1,5 @@
 <div id="tray" class="header">
-&nbsp; 
+	<ul>
+	<li>Video</li>
+	</ul>
 </div>
