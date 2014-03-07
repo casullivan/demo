@@ -20,7 +20,6 @@ body, html{
 }
 
 .swiper-slide{
-	font-size: 100px;
 	z-index:0;
 }
 
@@ -31,8 +30,8 @@ body, html{
 	width:100%;
 	background-color: rgba(0,0,0,.4);
 	z-index:100;
-	/*display:none;
-*/}
+	display:none;
+}
 
 .16x9{
 	height:66%;
