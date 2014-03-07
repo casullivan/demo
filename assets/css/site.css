@@ -45,7 +45,7 @@ div{
 	width:100%;
 	background-color: rgba(255,255,255,.7);
 	z-index:100;
-	ddisplay:none;
+	display:none;
 }
 
 .a16x9{
@@ -75,11 +75,13 @@ div{
 }
 
 .tray{
-	overflow: auto;
+//	overflow: auto;
 	white-space: nowrap;
 }
 
 .tray ul li{
+	overflow: auto;
+	white-space: nowrap;
 }
 
 .wl{ /*wrapper link*/
@@ -92,5 +94,22 @@ div{
 
 .i{
 	display:inline-block;
-	padding:30px;
+	padding:45px;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+.front_page_links{
+	margin-top:65px;
+	margin-left:60px;
+	width:220px;
+}
+
+.tray h1{
+	font-size: 300%;
+}
+
+.front_page_links h1{
+	padding:10px 30px 13px 10px;
+	font-size: 300%;
 }

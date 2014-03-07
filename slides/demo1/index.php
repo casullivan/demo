@@ -3,7 +3,13 @@
 <div class="swiper-slide light" style="background:url('/images/shutterstock_5507557_sm.jpg'); background-size:cover; background-position:0,-200px;">
 	<div class="a16x9c">
 		<div class="a16x9 content">
-			<t data-s="0"><imhg src="http://bravecs.com/images/logo.png?1385135368"/></t>
+			<div class="front_page_links">
+				<div style="background:rgba(0,0,0,.2); border-radius: 20px 20px 0 0"><h1>Casting</h1></div>
+				<div style="background:rgba(0,0,0,.4);"><h1>Controls</h1></div>
+				<div style="background:rgba(0,0,0,.6);"><h1>Motion</h1></div>
+				<div style="background:rgba(0,0,0,.8); border-radius: 0 0 20px 20px"><h1>Stamping</h1></div>
+			</div>
+			<!-- <t data-s="0"></t> -->
 		</div>
 	</div>
 </div>

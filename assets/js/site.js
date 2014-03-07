@@ -8,8 +8,11 @@ $(document).ready(function() {
 	});
 
 	S.wrapperTransitionEnd(function(e){
-		// if(e.activeSlide().id=='1')
-		// 	$("#video").get(0).play();
+		// if(e.activeLoopIndex==0)
+		// 	$('#tray').slideUp(100);
+		
+			// if(e.activeSlide().id=='1')
+			// 	$("#video").get(0).play();
 		window.location.hash=e.activeSlide().id;
 }, true);
 
