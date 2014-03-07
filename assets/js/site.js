@@ -1,7 +1,8 @@
 $(document).ready(function() {
+	
 	var parentSwiper = new Swiper('.parent-swiper',{
 		loop: true,
-		autoplay:4000,
+		autoplay:false,
 		resistance: '100%'
 	});
 
@@ -22,6 +23,7 @@ $(document).ready(function() {
         }
     };
 	}();
+	html5Video.init();
 
 	function playVideo() { 
 		parentSwiper.stopAutoplay();
@@ -38,18 +40,18 @@ $(document).ready(function() {
 	        endVideo(); 
 	}
 
-	html5Video.init();
-
 	$("#video").bind('scroll', function(){
 		$("html, body").animate({ scrollTop: 0 }, "fast");
 	});
 
 	$(document).swipe({
 	  	swipeDown:function(event, direction, distance, duration) {
-			parentSwiper.swipeTo(nextBookmark(parentSwiper.activeIndex), 100);
+	  		$('#tray').slideDown('slow');
+			// parentSwiper.swipeTo(nextBookmark(parentSwiper.activeIndex), 100);
 	    },
 		swipeUp:function(event, direction, distance, duration) {
-			parentSwiper.swipeTo(prevBookmark(parentSwiper.activeIndex), 100);
+	  		$('#tray').slideUp('slow');
+			// parentSwiper.swipeTo(prevBookmark(parentSwiper.activeIndex), 100);
 	  	},
 	});	
 

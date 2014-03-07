@@ -4,7 +4,7 @@ ini_set('display_errors', True);
 
 include("framework/head.php"); ?>
 
-<div class=" parent-swiper swiper-container" data-count="3">
+<div class="parent-swiper swiper-container" data-count="3">
 	<div class="swiper-wrapper">
 		<?php
 			$slidesDirectory = new RecursiveDirectoryIterator(realpath('slides'));

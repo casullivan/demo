@@ -1,6 +1,9 @@
 CACHE MANIFEST
 NETWORK:
 *
+/index.php
+/
+
 CACHE:
 /assets/jq/jquery-1.11.0.min.js
 /assets/jq/jquery.mobile-1.4.1.min.js

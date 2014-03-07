@@ -19,4 +19,15 @@ body, html{
 
 .swiper-slide{
 	font-size: 100px;
+	z-index:0;
+}
+
+#tray{
+	position:fixed;
+	top:0; left:0;
+	height:100px;
+	width:100%;
+	background-color: red;
+	z-index:100;
+	display:none;
 }
