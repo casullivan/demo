@@ -15,24 +15,28 @@ $(document).ready(function() {
 
 
 	// var html5Video = function() {
- //    return {
- //        init: function() {
- //            var video = document.getElementsByTagName('video')[0];
- //            video.addEventListener('ended', endVideo, false);
- //            video.addEventListener('pause', pauseVideo, false);
- //            video.addEventListener('play', playVideo, false);
- //        }
- //    };
+ 	//    return {
+ 	//        init: function() {
+ 	//            var video = document.getElementsByTagName('video')[0];
+ 	//            video.addEventListener('ended', endVideo, false);
+ 	//            video.addEventListener('pause', pauseVideo, false);
+	//            video.addEventListener('play', playVideo, false);
+ 	//        }
+ 	//    };
 	// }();
 	// html5Video.init();
 
+	$(document).on('pinchopen', function(){
+		window.location.reload();
+	});
+
 	// tap local
-	$('t').on('tap', function(e){
+	$('t').on('tapone', function(e){
 		S.swipeTo($(this).data('s'), 500);
 	});
 
 	// tap href
-	$('th').on('tap', function(e){
+	$('th').on('tapone', function(e){
 		window.location+=$(this).attr('href');
 	});
 
