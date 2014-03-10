@@ -8,9 +8,12 @@ $(document).ready(function() {
 	});
 
 	S.wrapperTransitionEnd(function(e){
-		// if(e.activeLoopIndex==0)
-		// 	$('#tray').slideUp(100);
-		
+		if(e.activeLoopIndex==0){
+			$('#tray').slideDown(100);
+			$('#navbar').slideUp(100);
+		}else{
+			$('#navbar').slideDown(100);
+		}
 			// if(e.activeSlide().id=='1')
 			// 	$("#video").get(0).play();
 		window.location.hash=e.activeSlide().id;
@@ -29,7 +32,7 @@ $(document).ready(function() {
 	// }();
 	// html5Video.init();
 
-	$(document).on('pinchopen', function(){
+	$(document).on('tapthree', function(){
 		window.location.reload();
 	});
 
@@ -39,7 +42,7 @@ $(document).ready(function() {
 	});
 
 	// tap href
-	$('th').on('tapone', function(e){
+	$('tap').on('tapone', function(e){
 		window.location+=$(this).attr('href');
 	});
 

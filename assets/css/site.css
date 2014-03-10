@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'AlternateGothic2BTRegular';
+    src: url('../fonts/alternate-gothic-no2-bt-webfont.eot');
+    src: local('☺'), 
+        url('../fonts/alternate-gothic-no2-bt-webfont.woff') format('woff'), 
+        url('../fonts/alternate-gothic-no2-bt-webfont.ttf') format('truetype'), 
+        url('../fonts/alternate-gothic-no2-bt-webfont.svg') format('svg');
+}
+
 body{ 
    	background: #000;
    	position:absolute;
@@ -8,6 +17,10 @@ body{
 body, html{
 	overflow:hidden;
 	-webkit-user-select: none;
+}
+
+h1{
+	font-family: "AlternateGothic2BTRegular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
 div{
@@ -43,9 +56,11 @@ div{
 	top:0; left:0;
 	height:14%;
 	width:100%;
-	background-color: rgba(255,255,255,.7);
+	background-color: rgba(255,0,0,.7);
+	border:0;
+	border-bottom:2px solid #FFF;
+	color:white;
 	z-index:100;
-	display:none;
 }
 
 .a16x9{
@@ -74,14 +89,19 @@ div{
 	height:20%;
 }
 
-.tray{
-//	overflow: auto;
+#tray{
+	overflow: auto;
 	white-space: nowrap;
 }
 
-.tray ul li{
+#tray ul li{
 	overflow: auto;
 	white-space: nowrap;
+}
+
+#tray h1{
+	font-size: 200%;
+	overflow: hidden;
 }
 
 .wl{ /*wrapper link*/
@@ -105,11 +125,21 @@ div{
 	width:220px;
 }
 
-.tray h1{
-	font-size: 300%;
+.front_page_links h1{
+	padding:0 30px 0 10px;
+	font-size: 460%;
 }
 
-.front_page_links h1{
-	padding:10px 30px 13px 10px;
-	font-size: 300%;
+#navbar{
+	position:absolute;
+	bottom:0;
+	right:0;
+	overflow:hidden;
+}
+
+#navbar li{
+    display: inline-block;
+    zoom:1;
+    *display:inline;
+    margin: 0 90px 0 0;
 }
