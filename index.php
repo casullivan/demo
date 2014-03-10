@@ -8,8 +8,8 @@ include("framework/head.php"); ?>
 		<?php
 			$slidesDirectory = new RecursiveDirectoryIterator(realpath('slides'));
 			$Iterator = new RecursiveIteratorIterator($slidesDirectory);
-			$php_files = /*array_reverse*/(iterator_to_array(new RegexIterator($Iterator, '/^.+\.php$/i', RecursiveRegexIterator::GET_MATCH)));
-			foreach ( $php_files as $filename => $file) include($filename); 
+			$php_files = array_reverse(iterator_to_array(new RegexIterator($Iterator, '/^.+\.php$/i', RecursiveRegexIterator::GET_MATCH)));
+			foreach ( $php_files as $filename => $file) include($filename);
 		?>
 	</div>
 </div>
