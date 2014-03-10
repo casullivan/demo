@@ -12,24 +12,36 @@ body{
    	position:absolute;
    	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 300;
+	z-index:0;
+	background: #FFF url('/images/shutterstock_5507557_sm.jpg'); 
 }
 
 body, html{
 	overflow:hidden;
 	-webkit-user-select: none;
+	background-size:cover; 
+	background-position:200px,-200px;
+	z-index:0;
 }
 
 h1{
 	font-family: "AlternateGothic2BTRegular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	text-shadow: 2px 1px 3px rgba(0,0,0,.7); 
+	padding-right:5px;
 }
 
 h2{
 	font-size:200%;
 	text-shadow: 1px 1px 7px rgba(0,0,0,.7); 
 }
+
 div{
 	padding:10px;
+}
+
+a, a:hover{
+	text-decoration: none;
+	color:inherit;
 }
 
 .light{
@@ -181,4 +193,44 @@ div{
     zoom:1;
     *display:inline;
     margin: 0 90px 0 0;
+}
+
+.video{
+	background:black;
+}
+
+.video .video_controls{
+	position:absolute;
+	bottom:20px;
+	left:10px;
+	z-index: 101;
+}
+
+.video .a16x9c{
+	position:relative;
+}
+
+.video .a16x9{
+	padding:0;
+}
+
+.video_controls div{
+	display:inline-block;
+}
+
+.pause_play, .replay{
+	width:50px;
+	height:50px;
+	background:url('/assets/images/pause_play_replay.png') no-repeat;
+	background-size:cover; 
+	margin-right:10px;
+	background-position:-63px;
+}
+
+.pause_play.play{
+	background-position:0px;
+}
+
+.replay{ 
+	background-position:-126px;
 }
