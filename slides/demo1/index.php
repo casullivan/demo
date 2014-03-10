@@ -3,11 +3,31 @@
 <div class="swiper-slide light" style="background:url('/images/shutterstock_5507557_sm.jpg') no-repeat; background-size:cover; background-position:200px,-200px;">
 	<div class="a16x9c">
 		<div class="a16x9 content">
-			<div class="front_page_links">
+			<div id="front_page_links">
 				<div style=" border-radius: 20px 20px 0 0"><h1>CONTROLS</h1></div>
 				<div style=""><h1>STAMPING</h1></div>
 				<div style=""><h1>CASTING</h1></div>
 				<div style="border-radius: 0 0 20px 20px"><h1>MOTION</h1></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="swiper-slide light" style="background:url('/images/shutterstock_5507557_sm.jpg') no-repeat; background-size:cover; background-position:200px,-200px;">
+	<div class="a16x9c">
+		<div class="a16x9 content">
+			<div class="index_links">
+				<div style=" border-radius: 20px 20px 0 0"><h1>CONTROLS</h1></div>
+				<div style=""><h1>STAMPING</h1></div>
+				<div style=""><h1>CASTING</h1></div>
+				<div style="border-radius: 0 0 20px 20px"><h1>MOTION</h1></div>
+			</div>
+			<div class="blurb">
+				<t data-s="0">
+					<h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum mi nec massa tristique tincidunt. Nulla tristique orci non posuere convallis. Proin dapibus lorem vitae neque auctor laoreet. </p></h2>
+					
+				</t>
+				<div>
+				</div>
 			</div>
 		</div>
 	</div>

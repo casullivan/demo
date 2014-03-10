@@ -1,4 +1,4 @@
-var S;
+var S, trayReqested, trayDown;
 $(document).ready(function() {
 	
 	S = new Swiper('.parent-swiper',{
@@ -7,15 +7,25 @@ $(document).ready(function() {
 		resistance: '100%'
 	});
 
+	// if(window.location.hash!=0)
+	 	S.swipeTo(parseInt(1), 0);
+
 	S.wrapperTransitionEnd(function(e){
 		if(e.activeLoopIndex==0){
 			$('#tray').slideDown(100);
 			$('#navbar').slideUp(100);
-		}else{
+			$('#front_page_links').slideDown(50);
+		} else {
 			$('#navbar').slideDown(100);
+			$('#front_page_links').hide();
 		}
-			// if(e.activeSlide().id=='1')
-			// 	$("#video").get(0).play();
+		// if(e.previousIndex==0){
+			
+		// 	$('#navbar').slideDown(100);
+		// 	$('#front_page_links').hide();
+		// }
+
+		// 	$("#video").get(0).play();
 		window.location.hash=e.activeSlide().id;
 }, true);
 
