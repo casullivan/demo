@@ -20,6 +20,10 @@ sudo nano /etc/avahi/avahi-daemon.conf # insert hostname
 <h3>Resources</h3> 
 http://www.idangero.us/sliders/swiper/api.php
 
+<h3>Usage</h3>
+link to another slide 
+<a onclick="goTo('#red')">link to id red</a>
+
 https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
 <br/>
 <h3>TODO</h3>

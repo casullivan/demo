@@ -1,4 +1,4 @@
-var S, trayReqested, trayDown, slide, video;
+var S, trayReqested, trayDown, slide, video, slide_number;
 $(document).ready(function() {
 	
 	S = new Swiper('.parent-swiper',{
@@ -7,17 +7,13 @@ $(document).ready(function() {
 		resistance: '100%'
 	});
 
-	// if(window.location.hash!=0)
-	//  	goTo(window.location.hash);
-
 	S.wrapperTransitionEnd(function(e){
-		if(e.activeLoopIndex==0){
+		slide_number=e.activeLoopIndex;
+		if(slide_number==0){
 			$('#tray').slideDown(175);
 			$('#navbar').slideUp(150);
-			//$('#front_page_links').slideDown(50);
 		} else {
 			$('#navbar').slideDown(150);
-			//$('#front_page_links').hide();
 		}
 
 		if(slide) video.pause();
@@ -28,14 +24,24 @@ $(document).ready(function() {
 			video.play();
 		}
 
-		// if(e.previousIndex==0){
-		// 	$('#navbar').slideDown(100);
-		// 	$('#front_page_links').hide();
+		//uncomment for production
+		// if(typeof(Storage)!=="undefined"){
+	 //  		localStorage.setItem('slide_number', slide_number);
 		// }
-		// 	$("#video").get(0).play();
-		// window.location.hash=e.activeSlide().id;
-}, true);
+	}, true);
 
+
+	// if(typeof(Storage)!=="undefined"){
+	//   	if (localStorage.getItem('slide_number')){
+	//   		S.swipeTo(localStorage.getItem('slide_number'), 0);
+	// 		if(localStorage.getItem('slide_number')==0){
+	// 			$('#tray').slideDown(175);
+	// 			$('#navbar').slideUp(150);
+	// 		} else {
+	// 			$('#navbar').slideDown(150);
+	// 		}
+	//   	}
+	// }
 
 	var html5Video = function() {
 	   return {
@@ -53,7 +59,6 @@ $(document).ready(function() {
 
 	// tap local
 	$('t').on('tapone', function(e){
-		// S.swipeTo($(this).data('s'), 500);
 		console.log($(this).data('go'));
 		goTo($(this).data('go'));
 	});
@@ -88,9 +93,6 @@ $(document).ready(function() {
 
 	function pauseVideo() { 
 		$(".pause_play").removeClass('play');
-	  //   var video = document.getElementsByTagName('video')[0];
-	  //   if (!video.webkitDisplayingFullscreen)
-			// S.startAutoplay();
 	}
 
 
@@ -103,16 +105,9 @@ $(document).ready(function() {
 	  		$('#tray').slideUp(100);
 	  	},
 	});	
-
-	// $(document).ready(function(){
-	// 	$('.swiper-slide').each(function(i, obj) { /*if($(obj).hasClass('b')) */$(obj).attr('data-value',i) });
-	// });
-	//slide.isActive()
-	//$('.swiper-slide').each(function(i, o) { if($(o).attr('id' ,i).hasClass('b')) addToNav(o); });
 });
 
 	function goTo(selector){
-		console.log('goto' + selector);
 		S.swipeTo($(selector).index()-1, 0);
 	}
 
