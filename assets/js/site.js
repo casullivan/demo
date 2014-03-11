@@ -1,4 +1,4 @@
-var S, trayReqested, trayDown, slide, video, slide_number;
+var S, slide, video, slide_number;
 $(document).ready(function() {
 	
 	S = new Swiper('.parent-swiper',{
@@ -9,6 +9,7 @@ $(document).ready(function() {
 
 	S.wrapperTransitionEnd(function(e){
 		slide_number=e.activeLoopIndex;
+		console.log('slide_number=' + slide_number + '	active index=' + e.activeIndex + '	slide.index=' + $(e).index());
 		if(slide_number==0){
 			$('#tray').slideDown(175);
 			$('#navbar').slideUp(150);
@@ -24,24 +25,23 @@ $(document).ready(function() {
 			video.play();
 		}
 
-		//uncomment for production
-		// if(typeof(Storage)!=="undefined"){
-	 //  		localStorage.setItem('slide_number', slide_number);
-		// }
+		if(typeof(Storage)!=="undefined"){
+	  		localStorage.setItem('slide_number', slide_number);
+		}
 	}, true);
 
 
-	// if(typeof(Storage)!=="undefined"){
-	//   	if (localStorage.getItem('slide_number')){
-	//   		S.swipeTo(localStorage.getItem('slide_number'), 0);
-	// 		if(localStorage.getItem('slide_number')==0){
-	// 			$('#tray').slideDown(175);
-	// 			$('#navbar').slideUp(150);
-	// 		} else {
-	// 			$('#navbar').slideDown(150);
-	// 		}
-	//   	}
-	// }
+	if(typeof(Storage)!=="undefined"){
+	  	if (localStorage.getItem('slide_number')){
+	  		S.swipeTo(localStorage.getItem('slide_number'), 0);
+			if(localStorage.getItem('slide_number')==0){
+				$('#tray').show();
+				$('#navbar').hide();
+			} else {
+				$('#navbar').show();
+			}
+	  	}
+	}
 
 	var html5Video = function() {
 	   return {
@@ -53,7 +53,7 @@ $(document).ready(function() {
 	   };
 	}();
 
-	$(document).on('tapthree', function(){
+	$(document).on('rotatecw rotateccw tapthree shake shakefrontback shakeleftright shakeupdown', function(){
 		window.location.reload();
 	});
 
@@ -95,8 +95,6 @@ $(document).ready(function() {
 		$(".pause_play").removeClass('play');
 	}
 
-
-
 	$(document).swipe({
 	  	swipeDown:function(event, direction, distance, duration) {
 	  		$('#tray').slideDown(100);
@@ -108,7 +106,8 @@ $(document).ready(function() {
 });
 
 	function goTo(selector){
-		S.swipeTo($(selector).index()-1, 0);
+		console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 500));
+		
 	}
 
 window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault(); } }
