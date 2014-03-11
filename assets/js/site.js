@@ -114,18 +114,9 @@ $(document).ready(function() {
 	});	
 });
 
-	function goTo(selector){
-		console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 0));
-		
-	}
+function goTo(selector){
+	console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 0));
+
+}
 
 window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault(); } }
-
-function addToNav(o){
-
-}
-
-function clickr(e){
-	e.preventDefault();
-	alert('z clicked');
-}
