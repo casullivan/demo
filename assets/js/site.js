@@ -7,6 +7,16 @@ $(document).ready(function() {
 		resistance: '100%'
 	});
 
+	var html5Video = function() {
+	   return {
+	       init: function() {
+	           video.addEventListener('ended', endVideo, false);
+	           video.addEventListener('pause', pauseVideo, false);
+	           video.addEventListener('play', playVideo, false);
+	       }
+	   };
+	}();
+
 	S.wrapperTransitionEnd(function(e){
 		slide_number=e.activeLoopIndex;
 		console.log('slide_number=' + slide_number + '	active index=' + e.activeIndex + '	slide.index=' + $(e).index());
@@ -17,7 +27,7 @@ $(document).ready(function() {
 			$('#navbar').slideDown(150);
 		}
 
-		if(slide) {
+		if(video) {
 			video.pause();
 			S.startAutoplay();
 		}
@@ -33,10 +43,16 @@ $(document).ready(function() {
 		}
 	}, true);
 
-
 	if(typeof(Storage)!=="undefined"){
 	  	if (localStorage.getItem('slide_number')){
 	  		S.swipeTo(localStorage.getItem('slide_number'), 0);
+	  		if($(S.activeSlide()).hasClass('video')){
+				slide=$(S.activeSlide());
+				video=slide.find('video').get(0);
+				html5Video.init();
+				video.play();
+			}
+
 			if(localStorage.getItem('slide_number')==0){
 				$('#tray').show();
 				$('#navbar').hide();
@@ -45,16 +61,6 @@ $(document).ready(function() {
 			}
 	  	}
 	}
-
-	var html5Video = function() {
-	   return {
-	       init: function() {
-	           video.addEventListener('ended', endVideo, false);
-	           video.addEventListener('pause', pauseVideo, false);
-	           video.addEventListener('play', playVideo, false);
-	       }
-	   };
-	}();
 
 	$(document).on('rotatecw rotateccw tapthree shake shakefrontback shakeleftright shakeupdown', function(){
 		window.location.reload();
@@ -95,6 +101,7 @@ $(document).ready(function() {
 
 	function pauseVideo() { 
 		$(".pause_play").removeClass('play');
+		setTimeout(function(){ S.startAutoplay(); }, 4000);
 	}
 
 	$(document).swipe({
