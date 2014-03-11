@@ -80,6 +80,7 @@ a, a:hover{
 	height:100%;
 	width:100%;
 	background-color: transparent;
+	background-size:cover !important; 
 }
 
 .a16x9c:before, .a16x9c:after{
@@ -198,18 +199,18 @@ a, a:hover{
 }
 
 .photo{
-	background:#FFF;
+	background:#000;
 }
 
 .video{
-	background:#FFF;
+	background:#000;
 }
 
 .video .video_controls{
 	position:absolute;
 	bottom:20px;
 	left:10px;
-	z-index: 101;
+	z-index: 201;
 }
 
 .video .a16x9c{
@@ -244,7 +245,7 @@ a, a:hover{
 .lower_bar{
 	height:14%;
 	position:fixed;
-	bottom:0;
+	bottom:-9px;
 	z-index: 102;
 	width:1024px;
 }

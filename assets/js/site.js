@@ -3,7 +3,7 @@ $(document).ready(function() {
 	
 	S = new Swiper('.parent-swiper',{
 		loop: true,
-		autoplay:false,
+		autoplay:4000,
 		resistance: '100%'
 	});
 
@@ -17,7 +17,10 @@ $(document).ready(function() {
 			$('#navbar').slideDown(150);
 		}
 
-		if(slide) video.pause();
+		if(slide) {
+			video.pause();
+			S.startAutoplay();
+		}
 		if($(e.activeSlide()).hasClass('video')){
 			slide=$(e.activeSlide());
 			video=slide.find('video').get(0);
@@ -82,13 +85,12 @@ $(document).ready(function() {
 	});
 
 	function playVideo() {
-		S.stopAutoplay();
 		$(".pause_play").addClass('play');
+		S.stopAutoplay();
 	}
 
 	function endVideo() { 
 		S.startAutoplay();
-		S.swipeNext();
 	}
 
 	function pauseVideo() { 
@@ -106,7 +108,7 @@ $(document).ready(function() {
 });
 
 	function goTo(selector){
-		console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 500));
+		console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 0));
 		
 	}
 
