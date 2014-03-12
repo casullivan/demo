@@ -3,7 +3,12 @@ $(document).ready(function() {
 	
 	S = new Swiper('.parent-swiper',{
 		loop: true,
-		autoplay:1000,
+		autoplay:2000,
+		autoplayDisableOnInteraction:true,
+		onTouchMove:
+			function(swiper){
+				pauseAutoplay(S, 6000);
+			},
 		resistance: '100%'
 	});
 
@@ -64,9 +69,26 @@ $(document).ready(function() {
 	  	}
 	}
 
-	$(document).on('rotatecw rotateccw tapthree shake shakefrontback shakeleftright shakeupdown', function(){
+	$(document).on('rotate', function(){
 		window.location.reload();
 	});
+
+	$(document).on('swipemove', function(){
+		setTimeout(function(){ swiper.startAutoplay(); }, 1000);
+	});
+
+
+	// $(document).on('swiperight', function(){
+	// 	console.log('swiperight');
+	// 	pauseAutoplay(S, 2000);
+	// 	S.swipeNext();
+	// });
+
+	// $(document).on('swipeleft', function(){
+	// 	console.log('left');
+	// 	pauseAutoplay(S, 2000);
+	// 	S.swipePrev();
+	// });	
 
 	// tap local
 	$('t').on('tapone', function(e){
@@ -99,6 +121,7 @@ $(document).ready(function() {
 
 	function endVideo() { 
 		$(".pause_play").removeClass('play');
+		if(slide) video.currentTime=0;
 		S.startAutoplay();
 	}
 
@@ -117,9 +140,14 @@ $(document).ready(function() {
 	});	
 });
 
-function goTo(selector){
-	console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 0));
+function pauseAutoplay(swiper, duration){
+	swiper.stopAutoplay();
+	setTimeout(function(){ swiper.startAutoplay(); }, 1000);
+}
 
+function goTo(selector){
+	pauseAutoplay(S, 4000);
+	console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 0));
 }
 
 window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault(); } }

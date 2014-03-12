@@ -2,10 +2,10 @@
 <html <?php //manifest="cache.appcache" ?>>
  <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no" />
 	<title>DEMO | DEMO</title>
 	<link rel="stylesheet" href="/assets/swiper/idangerous.swiper.css" media="all">
 	<link rel="stylesheet" href="/assets/bs/css/bootstrap.min.css" media="all">
