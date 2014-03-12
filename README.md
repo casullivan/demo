@@ -87,7 +87,7 @@ Video template
 <div class="swiper-slide video">
 	<div class="a16x9c">
 		<div class="a16x9">
-			<video id="video" src="/slides/demo2/TR12_AFTER.MP4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' id="video1" width="1024" height="580" preload x-webkit-airplay="disallow" />
+			<video id="video" src="/slides/demo2/TR12_AFTER.MP4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' width="1024" height="580" preload x-webkit-airplay="disallow" />
 		 </div>
 		 <div class="video_controls">
 			<div class="pause_play">&nbsp;</div>

@@ -1,17 +1,18 @@
-var S, slide, video, slide_number;
+var S, slide, video, slide_number, autoTimePlay ap;
 $(document).ready(function() {
+	ap=false;
 	
 	S = new Swiper('.parent-swiper',{
 		loop: true,
 		autoplay:2000,
-		autoplayDisableOnInteraction:true,
 		onTouchMove:
-			function(swiper){
-				pauseAutoplay(S, 6000);
+			function(s){
+				pauseAutoplay(s, 99000);
 			},
 		resistance: '100%'
 	});
 
+S.stopAutoplay();
 	var html5Video = function() {
 	   return {
 	       init: function() {
@@ -73,9 +74,12 @@ $(document).ready(function() {
 		window.location.reload();
 	});
 
-	$(document).on('swipemove', function(){
-		setTimeout(function(){ swiper.startAutoplay(); }, 1000);
-	});
+	// $(document).on('swipemove', function(){
+	// 	console.log(S.stopAutoplay()); 
+		
+	// 	console.log('swipe');
+	// 	pauseAutoplay(S,14000);
+	// });
 
 
 	// $(document).on('swiperight', function(){
@@ -127,7 +131,7 @@ $(document).ready(function() {
 
 	function pauseVideo() { 
 		$(".pause_play").removeClass('play');
-		setTimeout(function(){ S.startAutoplay(); }, 1000);
+		pauseAutoplay(S, 5000);
 	}
 
 	$(document).swipe({
@@ -138,16 +142,19 @@ $(document).ready(function() {
 	  		$('#tray').slideUp(100);
 	  	},
 	});	
-});
+
 
 function pauseAutoplay(swiper, duration){
+	console.log("pauseAutoPlay");
 	swiper.stopAutoplay();
-	setTimeout(function(){ swiper.startAutoplay(); }, 1000);
+	ap=false;
+	window.clearTimeout(autoTimePlay);
+	autoTimePlay = window.setTimeout(function(){ if(!ap)swiper.startAutoplay(); }, duration);
 }
 
 function goTo(selector){
 	pauseAutoplay(S, 4000);
 	console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 0));
 }
-
+});
 window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault(); } }
