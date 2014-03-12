@@ -3,7 +3,7 @@ $(document).ready(function() {
 	
 	S = new Swiper('.parent-swiper',{
 		loop: true,
-		autoplay:4000,
+		autoplay:1000,
 		resistance: '100%'
 	});
 
@@ -20,6 +20,7 @@ $(document).ready(function() {
 	S.wrapperTransitionEnd(function(e){
 		slide_number=e.activeLoopIndex;
 		console.log('slide_number=' + slide_number + '	active index=' + e.activeIndex + '	slide.index=' + $(e).index());
+		
 		if(slide_number==0){
 			$('#tray').slideDown(175);
 			$('#navbar').slideUp(150);
@@ -27,10 +28,11 @@ $(document).ready(function() {
 			$('#navbar').slideDown(150);
 		}
 
-		if(video) {
+		if(slide) {
 			video.pause();
 			S.startAutoplay();
 		}
+
 		if($(e.activeSlide()).hasClass('video')){
 			slide=$(e.activeSlide());
 			video=slide.find('video').get(0);
@@ -96,12 +98,13 @@ $(document).ready(function() {
 	}
 
 	function endVideo() { 
+		$(".pause_play").removeClass('play');
 		S.startAutoplay();
 	}
 
 	function pauseVideo() { 
 		$(".pause_play").removeClass('play');
-		setTimeout(function(){ S.startAutoplay(); }, 4000);
+		setTimeout(function(){ S.startAutoplay(); }, 1000);
 	}
 
 	$(document).swipe({
