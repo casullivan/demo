@@ -1,18 +1,12 @@
-var S, slide, video, slide_number, autoTimePlay ap;
+var S, slide, video, slide_number, autoTimePlay;
 $(document).ready(function() {
-	ap=false;
 	
 	S = new Swiper('.parent-swiper',{
 		loop: true,
-		autoplay:2000,
-		onTouchMove:
-			function(s){
-				pauseAutoplay(s, 99000);
-			},
+		autoplay:false,
 		resistance: '100%'
 	});
 
-S.stopAutoplay();
 	var html5Video = function() {
 	   return {
 	       init: function() {
@@ -142,19 +136,18 @@ S.stopAutoplay();
 	  		$('#tray').slideUp(100);
 	  	},
 	});	
-
+});
 
 function pauseAutoplay(swiper, duration){
 	console.log("pauseAutoPlay");
 	swiper.stopAutoplay();
-	ap=false;
 	window.clearTimeout(autoTimePlay);
-	autoTimePlay = window.setTimeout(function(){ if(!ap)swiper.startAutoplay(); }, duration);
+	autoTimePlay = window.setTimeout(function(){ swiper.startAutoplay(); }, duration);
 }
 
 function goTo(selector){
 	pauseAutoplay(S, 4000);
 	console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 0));
 }
-});
+
 window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault(); } }
