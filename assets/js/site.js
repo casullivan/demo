@@ -1,6 +1,9 @@
-var S, slide, video, slide_number, autoTimePlay;
+var S, slide, video, slide_number, autoPlayEnable, holdPosition;
 $(document).ready(function() {
 	
+	autoPlayEnable=true;
+	holdPosition=false;
+
 	S = new Swiper('.parent-swiper',{
 		loop: true,
 		autoplay:false,
