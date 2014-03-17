@@ -15,4 +15,3 @@
 
  <body>
  <div id = "container">
-	<?php include("hero.php"); ?>
