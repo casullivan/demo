@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 	S = new Swiper('.parent-swiper',{
 		loop: true,
-		useCSS3Transforms:false,
+		useCSS3Transforms:true,
 		autoplay:false,
 		onSlideChangeStart: function(e, d){
 			if($(e.activeSlide()).hasClass('video')){
@@ -47,9 +47,9 @@ $(document).ready(function() {
 	  	}
 	}
 
-	// $(document).on('tapthree', function(){
-	// 	window.location.reload();
-	// });
+	$(document).on('tapthree', function(){
+		window.location.reload();
+	});
 	
 	$(".pause_play").on('tapone', function(){
 		if(slide){
