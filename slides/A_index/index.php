@@ -2,22 +2,22 @@
 	<div class="a16x9c">
 		<div class="a16x9 content">
 			<div id="front_page_links">
-				<a href="/stamping">
+				<a href="/stamping" target="_self">
 					<div>
 						<h1>STAMPING</h1>
 					</div>
 				</a>
-				<a href="/controls">
+				<a href="/controls" target="_self">
 					<div>
 						<h1>CONTROLS</h1>
 					</div>
 				</a>
-				<a href="/casting">
+				<a href="/casting" target="_self">
 					<div>
 						<h1>CASTING</h1>
 					</div>
 				</a>
-				<a href="/motion">
+				<a href="/motion" target="_self">
 					<div>
 						<h1>MOTION</h1>
 					</div>
