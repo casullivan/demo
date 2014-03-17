@@ -2,22 +2,22 @@
 	<div class="a16x9c">
 		<div class="a16x9 content">
 			<div id="front_page_links">
-				<a onclick='specific(1)'>
+				<a href="/stamping">
 					<div>
 						<h1>STAMPING</h1>
 					</div>
 				</a>
-				<a onclick='specific(54)'>
+				<a href="/controls">
 					<div>
 						<h1>CONTROLS</h1>
 					</div>
 				</a>
-				<a onclick='specific(58)'>
+				<a href="/casting">
 					<div>
 						<h1>CASTING</h1>
 					</div>
 				</a>
-				<a onclick='specific(76)'>
+				<a href="/motion">
 					<div>
 						<h1>MOTION</h1>
 					</div>

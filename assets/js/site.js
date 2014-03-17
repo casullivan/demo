@@ -78,14 +78,14 @@ $(document).ready(function() {
 		$(".pause_play").removeClass('play');
 	}
 
-	$(document).swipe({
-	  	swipeDown:function(event, direction, distance, duration) {
-	  		$('#tray').slideDown(100);
-	    },
-		swipeUp:function(event, direction, distance, duration) {
-	  		$('#tray').slideUp(100);
-	  	},
-	});	
+	// $(document).swipe({
+	//   	swipeDown:function(event, direction, distance, duration) {
+	//   		$('#tray').slideDown(100);
+	//     },
+	// 	swipeUp:function(event, direction, distance, duration) {
+	//   		$('#tray').slideUp(100);
+	//   	},
+	// });	
 });
 
 function specific(s){
