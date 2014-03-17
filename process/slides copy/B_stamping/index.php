@@ -46,7 +46,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/1.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/1.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -58,7 +58,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/1a.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/1a.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -70,7 +70,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/2.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/2.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -81,7 +81,7 @@
 	</div>
 </div>
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/3.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/3.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -92,24 +92,7 @@
 	</div>
 </div>
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/4.jpg');">			
-	<div class="lower_bar">
-		<ul>
-			<li><h2 class="text active">BEFORE</h2></li>
-			<li><a onclick="goTo('#stamping-ford-build')"><h2 class="text">BUILD</h2></a></li>
-			<li><a onclick="goTo('#stamping-ford-after')"><h2 class="text">AFTER</h2></a></li>
-		</ul>
-	</div>
-	</div>
-</div>
-
-
-
-
-
-
-<div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/5.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/4.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -121,8 +104,25 @@
 </div>
 
 
+
+
+
+
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/6.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/5.JPG');">			
+	<div class="lower_bar">
+		<ul>
+			<li><h2 class="text active">BEFORE</h2></li>
+			<li><a onclick="goTo('#stamping-ford-build')"><h2 class="text">BUILD</h2></a></li>
+			<li><a onclick="goTo('#stamping-ford-after')"><h2 class="text">AFTER</h2></a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+
+<div class="swiper-slide light photo">
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/6.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -134,7 +134,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/7.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/7.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -146,7 +146,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/8.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/8.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -158,7 +158,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/9.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/9.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -170,7 +170,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/10.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/10.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -182,7 +182,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/11.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/11.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -194,7 +194,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/11a.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/11a.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -206,7 +206,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/12.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/12.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -218,7 +218,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/13.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/13.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -230,7 +230,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/14.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/14.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -242,7 +242,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/15.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/15.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -254,7 +254,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/16.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/16.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -266,7 +266,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/17.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/17.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -278,7 +278,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/18.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/18.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -290,7 +290,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/19.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/19.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -302,7 +302,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/20.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/20.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -314,7 +314,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/21.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/21.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -326,7 +326,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/22.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/22.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -338,7 +338,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/23.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/23.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -350,7 +350,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/24.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/24.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -362,7 +362,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/25.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/25.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -374,7 +374,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/26.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/26.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -386,7 +386,7 @@
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/27.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BEFORE/27.JPG');">			
 	<div class="lower_bar">
 		<ul>
 			<li><h2 class="text active">BEFORE</h2></li>
@@ -436,7 +436,7 @@
 
 
 <div class="swiper-slide photo" id="stamping-ford-build">
-	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BUILD/1.jpg');">
+	<div class="a16x9c" style="background:url('/slides/B_stamping/ford/BUILD/1.png');">
 
 		 <div class="lower_bar">
 		<ul>

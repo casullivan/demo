@@ -22,12 +22,12 @@
 
 
 <div class="swiper-slide light photo" id="motion-goodyear">
-	<div class="a16x9c" style="background:url('/slides/E_motion/goodyear/1.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/E_motion/goodyear/1.JPG');">			
 	</div>
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/E_motion/goodyear/2.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/E_motion/goodyear/2.JPG');">			
 	</div>
 </div>
 
@@ -45,6 +45,8 @@
 
 
 
+
+
 <div class="swiper-slide video" id="motion-gudel">
 	<div class="a16x9c">
 		<div class="a16x9">
@@ -56,6 +58,8 @@
 		</div>
 	</div>				
 </div>
+
+
 
 
 <div class="swiper-slide video" id="motion-gvs">
@@ -72,6 +76,8 @@
 
 
 
+
+
 <div class="swiper-slide video" id="motion-pexco">
 	<div class="a16x9c">
 		<div class="a16x9">
@@ -83,3 +89,4 @@
 		</div>
 	</div>				
 </div>
+

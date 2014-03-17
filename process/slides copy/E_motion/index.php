@@ -22,12 +22,12 @@
 
 
 <div class="swiper-slide light photo" id="motion-goodyear">
-	<div class="a16x9c" style="background:url('/slides/E_motion/goodyear/1.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/E_motion/goodyear/1.JPG');">			
 	</div>
 </div>
 
 <div class="swiper-slide light photo">
-	<div class="a16x9c" style="background:url('/slides/E_motion/goodyear/2.jpg');">			
+	<div class="a16x9c" style="background:url('/slides/E_motion/goodyear/2.JPG');">			
 	</div>
 </div>
 

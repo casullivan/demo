@@ -1,8 +1,9 @@
 CACHE MANIFEST
+
+# Version 2
+
 NETWORK:
 *
-/index.php
-/
 
 CACHE:
 /assets/jq/jquery-1.11.0.min.js

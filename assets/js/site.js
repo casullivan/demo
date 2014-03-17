@@ -1,14 +1,9 @@
-var S, slide, video, slide_number, autoPlayEnable, holdPosition;
+var S, slide, video, slide_number, autoPlayEnable, holdPosition, autoTimePlay;
 $(document).ready(function() {
 	
 	autoPlayEnable=true;
 	holdPosition=false;
 
-	S = new Swiper('.parent-swiper',{
-		loop: true,
-		autoplay:false,
-		resistance: '100%'
-	});
 
 	var html5Video = function() {
 	   return {
@@ -20,9 +15,12 @@ $(document).ready(function() {
 	   };
 	}();
 
-	S.wrapperTransitionEnd(function(e){
+	S = new Swiper('.parent-swiper',{
+		loop: true,
+		autoplay:false,
+		onSlideChangeStart: function(e, d){
 		slide_number=e.activeLoopIndex;
-		console.log('slide_number=' + slide_number + '	active index=' + e.activeIndex + '	slide.index=' + $(e).index());
+		//console.log('slide_number=' + slide_number + '	active index=' + e.activeIndex + '	slide.index=' + $(e).index());
 		
 		if(slide_number==0){
 			$('#tray').slideDown(175);
@@ -33,7 +31,7 @@ $(document).ready(function() {
 
 		if(slide) {
 			video.pause();
-			S.startAutoplay();
+			//S.startAutoplay();
 		}
 
 		if($(e.activeSlide()).hasClass('video')){
@@ -46,7 +44,13 @@ $(document).ready(function() {
 		if(typeof(Storage)!=="undefined"){
 	  		localStorage.setItem('slide_number', slide_number);
 		}
-	}, true);
+
+		},
+		resistance: '100%'
+	});
+
+	// S.wrapperTransitionEnd(function(e){
+	// 	}, true);
 
 	if(typeof(Storage)!=="undefined"){
 	  	if (localStorage.getItem('slide_number')){
@@ -67,7 +71,7 @@ $(document).ready(function() {
 	  	}
 	}
 
-	$(document).on('rotate', function(){
+	$(document).on('rotate tapthree', function(){
 		window.location.reload();
 	});
 
@@ -123,12 +127,12 @@ $(document).ready(function() {
 	function endVideo() { 
 		$(".pause_play").removeClass('play');
 		if(slide) video.currentTime=0;
-		S.startAutoplay();
+		//S.startAutoplay();
 	}
 
 	function pauseVideo() { 
 		$(".pause_play").removeClass('play');
-		pauseAutoplay(S, 5000);
+		//pauseAutoplay(S, 5000);
 	}
 
 	$(document).swipe({
@@ -142,15 +146,16 @@ $(document).ready(function() {
 });
 
 function pauseAutoplay(swiper, duration){
-	console.log("pauseAutoPlay");
-	swiper.stopAutoplay();
-	window.clearTimeout(autoTimePlay);
-	autoTimePlay = window.setTimeout(function(){ swiper.startAutoplay(); }, duration);
+	// console.log("pauseAutoPlay");
+	// swiper.stopAutoplay();
+	// window.clearTimeout(autoTimePlay);
+	// autoTimePlay = window.setTimeout(function(){ swiper.startAutoplay(); }, duration);
 }
 
 function goTo(selector){
-	pauseAutoplay(S, 4000);
-	console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 0));
+	//pauseAutoplay(S, 4000);
+	//console.log(selector + ' ' + $(selector).index() + ' ' + S.swipeTo(($(selector).index()-1), 500));
+	S.swipeTo(($(selector).index()-1), 500);
 }
 
-window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault(); } }
+//window.onload = function(){ document.ontouchmove = function(e){ e.preventDefault(); } }

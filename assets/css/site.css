@@ -32,9 +32,13 @@ h1{
 
 h2{	
 	font-family: "AlternateGothic2BTRegular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-size:200%;
+	font-size:400%;
+	padding-left:5px;
 /*	text-shadow: 1px 1px 7px rgba(0,0,0,.7); 
 */}
+h2:before{
+	content: '\2022'
+}
 
 div{
 	padding:10px;
