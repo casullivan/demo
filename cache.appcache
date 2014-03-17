@@ -1,15 +1,23 @@
 CACHE MANIFEST
 
-# Version 2
+# Version 5
 
 NETWORK:
 *
+/index.php
+/index
+/
 
 CACHE:
 /assets/jq/jquery-1.11.0.min.js
-/assets/jq/jquery.mobile-1.4.1.min.js
-/assets/jq/jquery.touchSwipe.js
 /assets/swiper/idangerous.swiper.js
-/assets/jq/jquery.mobile-1.4.1.min.css
 /assets/swiper/idangerous.swiper.css
+/assets/bs/css/bootstrap.min.css
 /assets/css/html5reset.css
+/slides/B_stamping/ford/BEFORE/1.jpg
+/slides/B_stamping/ford/BEFORE/1a.jpg
+/slides/B_stamping/ford/BEFORE/2.jpg
+/slides/B_stamping/ford/BEFORE/3.jpg
+/slides/B_stamping/ford/BEFORE/4.jpg
+/slides/B_stamping/ford/BEFORE/5.jpg
+

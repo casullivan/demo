@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<html <?php //manifest="cache.appcache" ?>>
+<html <?php //manifest="cache.appcache" ?> >
  <head>
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
